@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+#header{
+    background-color: #15104a;
+}
+#footer{
+    background-color: #15104a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#links{
+    padding-left: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu{
+    display: flex;
+    list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-link{
+    text-decoration: none;
+    display: flex;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;
+    list-style: none;
+    padding: 0 20px;
+}  
+.text{
+    margin-top: 25px;
+    white-space: nowrap;
 }
 
-.App-link {
-  color: #61dafb;
+i{
+    color: whitesmoke;
+    font-size: 50px;
+    padding-top: 20px;
+    padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.List{
+    display: none; 
+    width: 50px;
+    border-radius: 5%;
 }
+
+#movie:hover .MList{
+    display: block;
+    text-align: center;
+    padding: 4px;
+    position: absolute;
+    background-color: #190da5;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-size: 25px;
+}
+
+#TV:hover .List{
+    display: block;
+    text-align: center;
+    padding: 4px;
+    position: absolute;
+    background-color: #190da5;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-size: 25px;
+}
+
+.listicon{
+    text-decoration: none;
+    color: #a3a3a3;
+}
+.listicon:hover{
+    color: #f7f7f8;
+}
+
+#rightSide{
+    display: flex;
+    position:sticky;
+    align-content: flex-end;
+}
+
