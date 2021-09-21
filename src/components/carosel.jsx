@@ -1,9 +1,10 @@
 import React from 'react';
-export default Carousel;
+export default Carosel;
 
-function Carousel(){
+function Carosel(){
     return(
         <div id="bgImage">
-            <img />
+            <input type="search" name="search" id="search" placeholder="enter a movie or tv name to search" />
+            <input type="submit" name="submit" id="submit" value="search" />
         </div>
     )};
