@@ -21,7 +21,7 @@
     font-size: 30px;
     font-weight: 500;
     list-style: none;
-    padding: 0 20px;
+    padding: 0 30px;
 }  
 .text{
     margin-top: 25px;
@@ -73,7 +73,32 @@ i{
 
 #rightSide{
     display: flex;
-    position:sticky;
-    align-content: flex-end;
+    text-align:end;
+}
+#bgImage{
+    text-align: center;
+    /* padding: 260px;
+    background-image: url("https://cdn.mos.cms.futurecdn.net/N6JgmjQCK9NYzwdXBrHSjh-320-80.jpg");
+    height: 100%;
+    width: 100%; */
+}
+
+#search{
+    background-color: #d6d4d4;
+    width: 50%;
+    line-height: 50px;
+    font-size:larger;
+    border: 3px solid black;
+}
+#submit{
+    background-color: #220bf5;
+    width: 10%;
+    line-height: 50px;
+    border: 3px solid black;
+    font-size:larger;
+    border-left: 0;
+}
+.search-bar{
+ display:inline-flex;
 }
 

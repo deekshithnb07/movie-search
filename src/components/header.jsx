@@ -12,7 +12,7 @@ return(
                     </a>
                 </li>
                 <li id="movie">
-                    <a id="linkT"className="nav-link text Movie" onMouseEnter={Movielist()} href="#">Movie</a>
+                    <a id="linkT"className="nav-link text Movie" onMouseEnter={Movielist} href="#">Movie</a>
                     <ul className="nav-link List MList">
                         <a className="listicon" href="#"><li>Trending</li> </a>
                         <a className="listicon" href="#"><li>New-release</li></a>
@@ -31,10 +31,10 @@ return(
                 </li>
                 <li id="rightSide">
                     <a href="#" id="add"> 
-                        <i class="fas fa-plus" />
+                        <i className="fas fa-plus" />
                     </a>
                     <a href="#" id="profile">
-                    <i class="fas fa-user-circle" />
+                    <i className="fas fa-user-circle" />
                     </a>
                 </li>
             </ul>
