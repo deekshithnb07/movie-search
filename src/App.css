@@ -76,29 +76,32 @@ i{
     text-align:end;
 }
 #bgImage{
-    text-align: center;
-    /* padding: 260px;
-    background-image: url("https://cdn.mos.cms.futurecdn.net/N6JgmjQCK9NYzwdXBrHSjh-320-80.jpg");
-    height: 100%;
-    width: 100%; */
+    color:black;
+    width: 200%;
+    display:inline-block;
+    margin: 10px;
 }
 
 #search{
     background-color: #d6d4d4;
-    width: 50%;
-    line-height: 50px;
-    font-size:larger;
-    border: 3px solid black;
+    width: 80%;
 }
+
 #submit{
     background-color: #220bf5;
-    width: 10%;
-    line-height: 50px;
-    border: 3px solid black;
-    font-size:larger;
+    width: 20%;
     border-left: 0;
 }
 .search-bar{
- display:inline-flex;
+ display:inline-flex !important;
+ line-height: 50px;
+ border: 3px solid black;
+ font-size:larger;
+}
+
+#results{
+    color: rgb(0, 0, 0);
+    font-size:  50px;
+    font-weight: 500;
 }
 

@@ -13,9 +13,18 @@ function Apicall(){
     const [search, setSearch] = useState("");
     const [results, setResults] = useState([]);
     const [isSearching, setIssearching] = useState(false);
-    if(results.Response === "False"){
-        console.log("looding...");
-    }   
+
+    
+    async function omdbApi(){
+        await axios.get(URL + search + apiKey)
+           .then((response) => {
+               const res = response.data;
+           setResults(res);
+           })
+           .catch((error)=>{
+               console.error("Error fetching data: ", error);
+           });
+    }
 
     function handleChange(e){
         const searchText = e.target.value;
@@ -23,25 +32,26 @@ function Apicall(){
         console.log(searchText);
     }
 
-    async function handleSubmit(e){
+        
+
+    function handleSubmit(e){
+        omdbApi();
         console.log("searching for " + search);
         setIssearching(true);
-        await axios.get(`${URL}${search}${apiKey}`)
-            .then((response) => {         
-            setResults(response); 
-            console.log(results) ;
-            })
-            .catch((error)=>{
-                console.error("Error fetching data: ", error);
-            })
         setSearch("");
+        console.log(results);
     }
+
+    useEffect((ev)=>{
+        omdbApi();
+    },[])
   
 
     return(
+        <React.Fragment>
+        <div>
         <div id="bgImage" className="bg-image">
 
-            {/* input of movie search text */}
             <input 
             type="search" 
             name="search" 
@@ -58,11 +68,24 @@ function Apicall(){
             id="submit" 
             className="search-bar" 
             value="search" onClick={handleSubmit}>
-             search </button>            
-        {results.data.Response === "True" & isSearching === true ? 
-        <Search 
-        type={results.data.Title} 
-        title={results.data.Title}
-        /> : null }
+            search </button>
+            </div> 
         </div>
+
+        
+        <div>
+        {isSearching === true ? 
+        <Search 
+        title={results.Title} 
+        type={results.Type} 
+        pic={results.Poster}
+        rating={results.imdbRating}
+        desc={results.Plot}
+        date={results.Released}
+        genre={results.Genre}
+        lang={results.Language}
+        country={results.Country}
+        />  : null} 
+        </div>
+        </React.Fragment>
     )};

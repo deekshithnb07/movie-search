@@ -1,4 +1,5 @@
 import React from "react";
+import Apicall from "./Apicall";
 import logo from "F:/react/movie-search/src/img/apple-icon.png";
 export default Header;
 function Header(){
@@ -36,6 +37,8 @@ return(
                     <a href="#" id="profile">
                     <i className="fas fa-user-circle" />
                     </a>
+                    <Apicall />
+
                 </li>
             </ul>
         </nav>
