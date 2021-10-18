@@ -37,8 +37,6 @@ return(
                     <a href="#" id="profile">
                     <i className="fas fa-user-circle" />
                     </a>
-                    <Apicall />
-
                 </li>
             </ul>
         </nav>

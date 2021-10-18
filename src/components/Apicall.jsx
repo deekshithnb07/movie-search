@@ -48,8 +48,8 @@ function Apicall(){
   
 
     return(
-        <React.Fragment>
         <div>
+        <div className="d-flex justify-content-center">
         <div id="bgImage" className="bg-image">
 
             <input 
@@ -73,8 +73,8 @@ function Apicall(){
         </div>
 
         
-        <div>
-        {isSearching === true ? 
+        {isSearching === true & results.Response === "True" ? 
+        <div > 
         <Search 
         title={results.Title} 
         type={results.Type} 
@@ -85,7 +85,13 @@ function Apicall(){
         genre={results.Genre}
         lang={results.Language}
         country={results.Country}
-        />  : null} 
+        ser={search}
+        /> 
         </div>
-        </React.Fragment>
+        : null} 
+        {isSearching === true & results.Response === "False" ?
+        <h2 className="d-flex justify-content-center">no search data found</h2>
+        : null
+        }
+        </div>
     )};

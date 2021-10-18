@@ -77,14 +77,14 @@ i{
 }
 #bgImage{
     color:black;
-    width: 200%;
+    width: 80%;
     display:inline-block;
     margin: 10px;
 }
 
 #search{
     background-color: #d6d4d4;
-    width: 80%;
+    width: 50%;
 }
 
 #submit{
@@ -99,9 +99,15 @@ i{
  font-size:larger;
 }
 
+.img{
+    border: black solid 2px;
+}
+
 #results{
     color: rgb(0, 0, 0);
     font-size:  50px;
     font-weight: 500;
+    padding: 10px 50px;
+    background-color:#eeeeee;
 }
 
