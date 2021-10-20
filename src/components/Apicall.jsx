@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import useFetch from "react-fetch-hook"
 import axios from 'axios';
 import Search from './Result';
+import Trend from './Body';
 export default Apicall;
 
 // const apikeyV4 = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwOWZhODAwYTdhZWU3MjVjNGRkZWI5NmIzMGRhMDhhZCIsInN1YiI6IjYxM2Y3MWVhMGNkMzJhMDAyNzNhZjVkYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9TlDI6bfa1ZwvGNT_PIRpwnNd7UD1N3EIQvbcfutTR4";
@@ -42,15 +43,15 @@ function Apicall(){
         console.log(results);
     }
 
-    useEffect((ev)=>{
+    useEffect((e)=>{
         omdbApi();
     },[])
   
 
     return(
-        <div>
-        <div className="d-flex justify-content-center">
-        <div id="bgImage" className="bg-image">
+        <div className="container">
+        <div id="bgImage" 
+        className="bg-image d-flex justify-content-center">
 
             <input 
             type="search" 
@@ -68,8 +69,8 @@ function Apicall(){
             id="submit" 
             className="search-bar" 
             value="search" onClick={handleSubmit}>
-            search </button>
-            </div> 
+            search <i class="fas fa-search"></i> </button>
+
         </div>
 
         
@@ -93,5 +94,7 @@ function Apicall(){
         <h2 className="d-flex justify-content-center">no search data found</h2>
         : null
         }
+        <hr />
+        <Trend />
         </div>
     )};

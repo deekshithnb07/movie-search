@@ -4,7 +4,7 @@ import logo from "F:/react/movie-search/src/img/apple-icon.png";
 export default Header;
 function Header(){
 return(
-    <div id="header" className="container-fluid">
+    <div id="header" className="container-fluid sticky-top">
         <nav className="navbar">
             <ul className="menu">
                 <li>
@@ -30,7 +30,7 @@ return(
                         <a className="listicon" href="#"><li>Top-rated</li></a>
                     </ul>
                 </li>
-                <li id="rightSide">
+                <li id="rightSide" >
                     <a href="#" id="add"> 
                         <i className="fas fa-plus" />
                     </a>
